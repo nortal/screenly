@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        body {
+        margin: 0;
+        }
+
+        #container {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50%;
+            width: 90%;
+            height: 85%;
+            margin: auto;
+            position: absolute;
+            top: -7%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        #alttext {
+        font-size: 20px;
+        font-style: italic;
+        max-height: 71px;
+        width: 75%;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        overflow: hidden;
+        color: #666;
+        }
+
+    </style>
+    <script>
+        //$( window ).ready(function() {
+            $.ajax({
+                url: 'http://dynamic.xkcd.com/api-0/jsonp/comic?callback=?',
+                dataType: 'json', 
+                success: function(data) {
+                    console.log(data);
+                    $('#container').css('background-image', 'url("'+data.img+'")');
+                    $('#alttext').text(data.alt);
+                }
+            });
+        //});
+    </script>
+    
+    <div id="container"></div>
+    <div id="alttext"></div>
+
+</body>
+
+</html>
+
+
