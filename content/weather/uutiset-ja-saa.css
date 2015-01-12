@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.supercontainer {
+    /*font-size: 0;*/
+}
+
+.container {
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+.screeni1 {
+        width: 33%;
+}
+
+.screeni2 {
+        width: 67%;
+}
+
+iframe {
+    width: 66.66%;
+    height: 66.66%;
+    border: medium none;
+    transform: scale(1.5);
+    transform-origin: 0 0 0;
+    -moz-transform: scale(1.5);
+    -moz-transform-origin: 0 0 0;
+    -o-transform: scale(1.5);
+    -o-transform-origin: 0 0 0;
+    -webkit-transform: scale(1.5);
+    -webkit-transform-origin: 0 0 0;
+}
+
